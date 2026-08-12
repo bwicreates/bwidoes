@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Services — Booth & Witherspoon Investments</title>
+  <link rel="icon" href="assets/favicon.ico" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <script>tailwind.config = { theme: { extend: { colors: { primary: '#0ea5a4' } } } }</script>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body class="font-inter text-gray-800">
+  <header class="bg-white shadow-sm">
+    <div class="max-w-6xl mx-auto px-4 py-4 flex justify-between items-center">
+      <a href="index.html" class="flex items-center gap-3">
+        <img src="assets/images/logo.svg" alt="Booth & Witherspoon Investments logo" class="h-8 w-auto">
+        <span class="sr-only">Booth & Witherspoon Investments</span>
+      </a>
+      <nav class="hidden md:flex gap-6 items-center">
+        <a href="index.html" class="text-gray-700 hover:text-primary">Home</a>
+        <a href="about.html" class="text-gray-700 hover:text-primary">About</a>
+        <a href="properties.html" class="text-gray-700 hover:text-primary">Properties</a>
+        <a href="contact.html" class="text-gray-700 hover:text-primary">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="max-w-6xl mx-auto px-4 py-12">
+    <h1 class="text-3xl font-bold mb-6">Services</h1>
+
+    <section class="grid md:grid-cols-3 gap-6">
+      <div class="p-6 border rounded-lg">
+        <h3 class="text-xl font-semibold mb-2">Business Development</h3>
+        <p class="text-gray-600 mb-4">Growth strategy, sales process design, partnership sourcing, and execution support.</p>
+        <ul class="text-sm text-gray-600 space-y-1">
+          <li>Market research</li>
+          <li>Partnership outreach</li>
+          <li>Sales funnel optimization</li>
+        </ul>
+      </div>
+
+      <div class="p-6 border rounded-lg">
+        <h3 class="text-xl font-semibold mb-2">Real Estate</h3>
+        <p class="text-gray-600 mb-4">Property marketing, listing optimization, negotiation support, and transaction management.</p>
+        <ul class="text-sm text-gray-600 space-y-1">
+          <li>Photography & staging guidance</li>
+          <li>Listing syndication</li>
+          <li>Lead qualification</li>
+        </ul>
+      </div>
+
+      <div class="p-6 border rounded-lg">
+        <h3 class="text-xl font-semibold mb-2">Marketing</h3>
+        <p class="text-gray-600 mb-4">Brand strategy, paid digital campaigns, content, and analytics to generate qualified leads.</p>
+        <ul class="text-sm text-gray-600 space-y-1">
+          <li>Paid search & social</li>
+          <li>Content & listing copy</li>
+          <li>Performance reporting</li>
+        </ul>
+      </div>
+    </section>
+  </main>
+
+  <footer class="bg-white border-t">
+    <div class="max-w-6xl mx-auto px-4 py-6 text-sm text-gray-600 flex justify-between">
+      <div>© <span id="year3"></span> Booth & Witherspoon Investments</div>
+      <div><a href="contact.html" class="text-primary">Contact</a></div>
+    </div>
+  </footer>
+
+  <script>document.getElementById('year3').textContent = new Date().getFullYear();</script>
+</body>
+</html>

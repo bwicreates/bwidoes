@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Contact — Booth & Witherspoon Investments</title>
+  <link rel="icon" href="assets/favicon.ico" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <script>tailwind.config = { theme: { extend: { colors: { primary: '#0ea5a4' } } } }</script>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body class="font-inter text-gray-800">
+  <header class="bg-white shadow-sm">
+    <div class="max-w-6xl mx-auto px-4 py-4 flex justify-between items-center">
+      <a href="index.html" class="flex items-center gap-3">
+        <img src="assets/images/logo.svg" alt="Booth & Witherspoon Investments logo" class="h-8 w-auto">
+        <span class="sr-only">Booth & Witherspoon Investments</span>
+      </a>
+      <nav class="hidden md:flex gap-6 items-center">
+        <a href="index.html" class="text-gray-700 hover:text-primary">Home</a>
+        <a href="services.html" class="text-gray-700 hover:text-primary">Services</a>
+        <a href="properties.html" class="text-gray-700 hover:text-primary">Properties</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="max-w-3xl mx-auto px-4 py-12">
+    <h1 class="text-3xl font-bold mb-4">Contact</h1>
+    <p class="text-gray-600 mb-6">Email us at <a class="text-primary" href="mailto:hello@yourcompany.com">hello@yourcompany.com</a> or use the contact form below.</p>
+
+    <!-- Simple mailto form (opens user's email client) -->
+    <div class="bg-white border p-6 rounded-lg shadow-sm">
+      <form action="mailto:hello@yourcompany.com" method="post" enctype="text/plain">
+        <label class="block text-sm font-medium text-gray-700">Name</label>
+        <input name="Name" class="mt-1 p-2 w-full border rounded" placeholder="Your name" required>
+
+        <label class="block text-sm font-medium text-gray-700 mt-4">Email</label>
+        <input name="Email" type="email" class="mt-1 p-2 w-full border rounded" placeholder="you@example.com" required>
+
+        <label class="block text-sm font-medium text-gray-700 mt-4">Message</label>
+        <textarea name="Message" rows="5" class="mt-1 p-2 w-full border rounded" placeholder="How can we help?" required></textarea>
+
+        <div class="mt-4">
+          <button type="submit" class="bg-primary text-white px-4 py-2 rounded">Send</button>
+        </div>
+      </form>
+
+      <p class="text-xs text-gray-500 mt-3">Tip: the simple form above uses your email client. If you'd prefer a hosted form-to-email service (no email client required), we can add Formspree or Netlify Forms — say which and I’ll integrate it.</p>
+    </div>
+  </main>
+
+  <footer class="bg-white border-t">
+    <div class="max-w-6xl mx-auto px-4 py-6 text-sm text-gray-600 flex justify-between">
+      <div>© <span id="year5"></span> Booth & Witherspoon Investments</div>
+      <div><a href="index.html" class="text-primary">Home</a></div>
+    </div>
+  </footer>
+
+  <script>document.getElementById('year5').textContent = new Date().getFullYear();</script>
+</body>
+</html>

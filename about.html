@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>About — Booth & Witherspoon Investments</title>
+  <link rel="icon" href="assets/favicon.ico" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <script>
+    tailwind.config = { theme: { extend: { colors: { primary: '#0ea5a4' }, fontFamily: { inter: ['Inter','system-ui','sans-serif'] } } } }
+  </script>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body class="font-inter text-gray-800">
+  <header class="bg-white shadow-sm">
+    <div class="max-w-6xl mx-auto px-4 py-4 flex justify-between items-center">
+      <a href="index.html" class="flex items-center gap-3">
+        <img src="assets/images/logo.svg" alt="Booth & Witherspoon Investments logo" class="h-8 w-auto">
+        <span class="sr-only">Booth & Witherspoon Investments</span>
+      </a>
+      <nav class="hidden md:flex gap-6 items-center">
+        <a href="index.html" class="text-gray-700 hover:text-primary">Home</a>
+        <a href="services.html" class="text-gray-700 hover:text-primary">Services</a>
+        <a href="properties.html" class="text-gray-700 hover:text-primary">Properties</a>
+        <a href="contact.html" class="text-gray-700 hover:text-primary">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="max-w-4xl mx-auto px-4 py-12">
+    <h1 class="text-3xl font-bold mb-4">About Us</h1>
+    <p class="text-gray-600 mb-6">We combine business strategy, property expertise, and marketing to deliver measurable growth. Our team has experience across commercial real estate, digital marketing campaigns, and partnership development.</p>
+
+    <section class="mb-8">
+      <h2 class="text-xl font-semibold mb-3">Our Mission</h2>
+      <p class="text-gray-600">Help property owners and businesses realize value through better marketing, smarter deals, and repeatable growth systems.</p>
+    </section>
+
+    <section>
+      <h2 class="text-xl font-semibold mb-3">Team</h2>
+      <div class="grid sm:grid-cols-2 gap-6">
+        <div class="p-4 border rounded-lg">
+          <h3 class="font-semibold">Alex Morgan</h3>
+          <p class="text-sm text-gray-600">Founder — Business strategy & partnerships</p>
+        </div>
+        <div class="p-4 border rounded-lg">
+          <h3 class="font-semibold">Taylor Reed</h3>
+          <p class="text-sm text-gray-600">Head of Real Estate — Listings & transactions</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="bg-white border-t">
+    <div class="max-w-6xl mx-auto px-4 py-6 text-sm text-gray-600 flex justify-between">
+      <div>© <span id="year2"></span> Booth & Witherspoon Investments</div>
+      <div><a href="contact.html" class="text-primary">Contact</a></div>
+    </div>
+  </footer>
+
+  <script>document.getElementById('year2').textContent = new Date().getFullYear();</script>
+</body>
+</html>

@@ -1,0 +1,14 @@
+/* Small custom styles (Tailwind does most of the work) */
+:root {
+  --accent: #0ea5a4;
+}
+
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Fallback for images that fail to load (replace path with your own) */
+img[alt=""] {
+  background: #f3f4f6;
+}
