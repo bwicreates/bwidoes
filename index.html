@@ -8,7 +8,7 @@
   <link rel="icon" href="assets/favicon.ico" />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
   <script>
-    // Tailwind CDN with a small custom color
+    // Tailwind CDN with a small custom color (kept for utilities)
     tailwind.config = {
       theme: {
         extend: {
@@ -25,7 +25,7 @@
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="assets/css/styles.css">
 </head>
-<body class="font-inter text-gray-800 antialiased">
+<body class="font-inter text-gray-800 antialiased" id="pageBody">
   <header class="bg-white shadow-sm">
     <div class="max-w-6xl mx-auto px-4 sm:px-6">
       <div class="flex justify-between items-center py-4">
@@ -34,15 +34,22 @@
           <span class="sr-only">Booth & Witherspoon Investments</span>
         </a>
         <nav class="hidden md:flex gap-6 items-center">
-          <a href="about.html" class="text-gray-700 hover:text-primary">About</a>
-          <a href="services.html" class="text-gray-700 hover:text-primary">Services</a>
-          <a href="properties.html" class="text-gray-700 hover:text-primary">Properties</a>
-          <a href="contact.html" class="text-gray-700 hover:text-primary">Contact</a>
+          <a href="about.html" class="text-gray-700 hover:primary-text">About</a>
+          <a href="services.html" class="text-gray-700 hover:primary-text">Services</a>
+          <a href="properties.html" class="text-gray-700 hover:primary-text">Properties</a>
+          <a href="contact.html" class="text-gray-700 hover:primary-text">Contact</a>
         </nav>
-        <div class="md:hidden">
-          <button id="menuBtn" aria-label="Toggle menu" class="p-2 rounded-md text-gray-700 hover:bg-gray-100">
-            ☰
-          </button>
+        <div class="flex items-center gap-4">
+          <div class="hidden md:block theme-switcher">
+            <button data-theme="default" class="px-3 py-1 rounded-md bg-gray-100 hover:bg-gray-200">Default</button>
+            <button data-theme="red" class="px-3 py-1 rounded-md bg-red-700 text-white">Red</button>
+            <button data-theme="black" class="px-3 py-1 rounded-md bg-black text-white">Black</button>
+          </div>
+          <div class="md:hidden">
+            <button id="menuBtn" aria-label="Toggle menu" class="p-2 rounded-md text-gray-700 hover:bg-gray-100">
+              ☰
+            </button>
+          </div>
         </div>
       </div>
     </div>
@@ -53,21 +60,26 @@
         <a href="services.html" class="block text-gray-700">Services</a>
         <a href="properties.html" class="block text-gray-700">Properties</a>
         <a href="contact.html" class="block text-gray-700">Contact</a>
+        <div class="mt-2 flex gap-2">
+          <button data-theme="default" class="px-3 py-1 rounded-md bg-gray-100">Default</button>
+          <button data-theme="red" class="px-3 py-1 rounded-md bg-red-700 text-white">Red</button>
+          <button data-theme="black" class="px-3 py-1 rounded-md bg-black text-white">Black</button>
+        </div>
       </div>
     </div>
   </header>
 
   <main>
     <!-- Hero -->
-    <section class="bg-gradient-to-r from-primary/10 to-white">
+    <section class="bg-gradient-to-r from-white to-white">
       <div class="max-w-6xl mx-auto px-4 sm:px-6 py-16 lg:py-24">
         <div class="lg:flex lg:items-center lg:space-x-12">
           <div class="lg:w-1/2">
             <h1 class="text-3xl sm:text-4xl font-extrabold text-gray-900 mb-4">Business development, real estate & marketing that grows value</h1>
             <p class="text-gray-600 mb-6">We help businesses and property owners increase revenue, list properties that sell, and build brands that attract customers.</p>
             <div class="flex gap-4">
-              <a href="contact.html" class="inline-block bg-primary text-white px-5 py-3 rounded-md shadow hover:opacity-95">Get in touch</a>
-              <a href="properties.html" class="inline-block border border-primary text-primary px-5 py-3 rounded-md hover:bg-primary/5">View listings</a>
+              <a href="contact.html" class="inline-block primary-bg text-white px-5 py-3 rounded-md shadow hover:opacity-95">Get in touch</a>
+              <a href="properties.html" class="inline-block border primary-border primary-text px-5 py-3 rounded-md primary-bg-hover">View listings</a>
             </div>
             <ul class="mt-8 grid grid-cols-1 sm:grid-cols-2 gap-4 text-sm text-gray-600">
               <li>Strategy & growth</li>
@@ -109,7 +121,7 @@
       <div class="max-w-6xl mx-auto px-4 sm:px-6">
         <div class="flex items-center justify-between mb-6">
           <h2 class="text-2xl font-semibold">Featured Properties</h2>
-          <a href="properties.html" class="text-primary hover:underline">See all</a>
+          <a href="properties.html" class="primary-text hover:underline">See all</a>
         </div>
         <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
           <!-- Property card -->
@@ -119,8 +131,8 @@
               <h4 class="font-semibold">Modern office space — Downtown</h4>
               <p class="text-sm text-gray-600 mt-1">3,200 sq ft · Flexible terms</p>
               <div class="mt-4 flex justify-between items-center">
-                <span class="text-primary font-semibold">$6,200 / mo</span>
-                <a href="contact.html" class="text-sm text-gray-700 hover:text-primary">Inquire</a>
+                <span class="primary-text font-semibold">$6,200 / mo</span>
+                <a href="contact.html" class="text-sm text-gray-700 hover:primary-text">Inquire</a>
               </div>
             </div>
           </article>
@@ -131,8 +143,8 @@
               <h4 class="font-semibold">Retail storefront — High traffic</h4>
               <p class="text-sm text-gray-600 mt-1">1,100 sq ft · Excellent visibility</p>
               <div class="mt-4 flex justify-between items-center">
-                <span class="text-primary font-semibold">$3,800 / mo</span>
-                <a href="contact.html" class="text-sm text-gray-700 hover:text-primary">Inquire</a>
+                <span class="primary-text font-semibold">$3,800 / mo</span>
+                <a href="contact.html" class="text-sm text-gray-700 hover:primary-text">Inquire</a>
               </div>
             </div>
           </article>
@@ -143,8 +155,8 @@
               <h4 class="font-semibold">Industrial warehouse — Accessible</h4>
               <p class="text-sm text-gray-600 mt-1">12,000 sq ft · Drive-in bays</p>
               <div class="mt-4 flex justify-between items-center">
-                <span class="text-primary font-semibold">$12,500 / mo</span>
-                <a href="contact.html" class="text-sm text-gray-700 hover:text-primary">Inquire</a>
+                <span class="primary-text font-semibold">$12,500 / mo</span>
+                <a href="contact.html" class="text-sm text-gray-700 hover:primary-text">Inquire</a>
               </div>
             </div>
           </article>
@@ -154,13 +166,13 @@
 
     <!-- CTA -->
     <section class="max-w-6xl mx-auto px-4 sm:px-6 py-12">
-      <div class="bg-primary/5 border border-primary/20 rounded-lg p-8 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
+      <div class="primary-bg-soft primary-border-soft rounded-lg p-8 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
         <div>
           <h3 class="text-lg font-semibold">Ready to grow your business or list a property?</h3>
           <p class="text-sm text-gray-600">Contact us for a free consultation.</p>
         </div>
         <div>
-          <a href="contact.html" class="bg-primary text-white px-5 py-3 rounded-md inline-block">Contact us</a>
+          <a href="contact.html" class="primary-bg text-white px-5 py-3 rounded-md inline-block">Contact us</a>
         </div>
       </div>
     </section>
@@ -169,11 +181,11 @@
   <footer class="bg-white border-t mt-12">
     <div class="max-w-6xl mx-auto px-4 sm:px-6 py-8 flex flex-col sm:flex-row sm:justify-between gap-4">
       <div>
-        <a href="index.html" class="font-semibold text-primary">Booth & Witherspoon Investments</a>
+        <a href="index.html" class="font-semibold primary-text">Booth & Witherspoon Investments</a>
         <p class="text-sm text-gray-600 mt-1">Business development · Real estate · Marketing</p>
       </div>
       <div class="text-sm text-gray-600">
-        <p>Email: <a href="mailto:hello@yourcompany.com" class="text-primary hover:underline">hello@yourcompany.com</a></p>
+        <p>Email: <a href="mailto:hello@yourcompany.com" class="primary-text hover:underline">hello@yourcompany.com</a></p>
         <p class="mt-2">© <span id="year"></span> Booth & Witherspoon Investments</p>
       </div>
     </div>
@@ -185,6 +197,24 @@
       const m = document.getElementById('mobileMenu');
       m.classList.toggle('hidden');
     });
+
+    // Theme handling
+    const body = document.getElementById('pageBody');
+    const applyTheme = (theme) => {
+      body.classList.remove('theme-red', 'theme-black');
+      if (theme === 'red') body.classList.add('theme-red');
+      if (theme === 'black') body.classList.add('theme-black');
+      localStorage.setItem('site-theme', theme);
+    }
+    // Initialize theme from storage
+    const saved = localStorage.getItem('site-theme') || 'default';
+    applyTheme(saved);
+
+    // Theme buttons
+    document.querySelectorAll('[data-theme]').forEach(btn => {
+      btn.addEventListener('click', () => applyTheme(btn.getAttribute('data-theme')));
+    });
+
     document.getElementById('year').textContent = new Date().getFullYear();
   </script>
 </body>

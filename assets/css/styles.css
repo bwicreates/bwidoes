@@ -1,7 +1,28 @@
 /* Small custom styles (Tailwind does most of the work) */
 :root {
-  --accent: #0ea5a4;
+  --primary: #0ea5a4; /* default teal */
+  --primary-rgb: 14,165,164;
 }
+
+/* Red theme */
+.theme-red {
+  --primary: #7a1616;
+  --primary-rgb: 122,22,22;
+}
+
+/* Black theme */
+.theme-black {
+  --primary: #111827;
+  --primary-rgb: 17,24,39;
+}
+
+/* Utility classes that use the CSS variables */
+.primary-text { color: var(--primary) !important; }
+.primary-bg { background-color: var(--primary) !important; }
+.primary-border { border-color: var(--primary) !important; }
+.primary-bg-hover:hover { background-color: rgba(var(--primary-rgb),0.08) !important; }
+.primary-bg-soft { background-color: rgba(var(--primary-rgb),0.05); }
+.primary-border-soft { border-color: rgba(var(--primary-rgb),0.2); }
 
 body {
   -webkit-font-smoothing: antialiased;
@@ -12,3 +33,6 @@ body {
 img[alt=""] {
   background: #f3f4f6;
 }
+
+/* Theme selector styles */
+.theme-switcher button { font-size: 0.85rem; }

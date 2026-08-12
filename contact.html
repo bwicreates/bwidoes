@@ -10,7 +10,7 @@
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="assets/css/styles.css">
 </head>
-<body class="font-inter text-gray-800">
+<body class="font-inter text-gray-800" id="pageBody">
   <header class="bg-white shadow-sm">
     <div class="max-w-6xl mx-auto px-4 py-4 flex justify-between items-center">
       <a href="index.html" class="flex items-center gap-3">
@@ -18,16 +18,21 @@
         <span class="sr-only">Booth & Witherspoon Investments</span>
       </a>
       <nav class="hidden md:flex gap-6 items-center">
-        <a href="index.html" class="text-gray-700 hover:text-primary">Home</a>
-        <a href="services.html" class="text-gray-700 hover:text-primary">Services</a>
-        <a href="properties.html" class="text-gray-700 hover:text-primary">Properties</a>
+        <a href="index.html" class="text-gray-700 hover:primary-text">Home</a>
+        <a href="services.html" class="text-gray-700 hover:primary-text">Services</a>
+        <a href="properties.html" class="text-gray-700 hover:primary-text">Properties</a>
       </nav>
+      <div class="hidden md:block theme-switcher">
+        <button data-theme="default" class="px-3 py-1 rounded-md bg-gray-100 hover:bg-gray-200">Default</button>
+        <button data-theme="red" class="px-3 py-1 rounded-md bg-red-700 text-white">Red</button>
+        <button data-theme="black" class="px-3 py-1 rounded-md bg-black text-white">Black</button>
+      </div>
     </div>
   </header>
 
   <main class="max-w-3xl mx-auto px-4 py-12">
     <h1 class="text-3xl font-bold mb-4">Contact</h1>
-    <p class="text-gray-600 mb-6">Email us at <a class="text-primary" href="mailto:hello@yourcompany.com">hello@yourcompany.com</a> or use the contact form below.</p>
+    <p class="text-gray-600 mb-6">Email us at <a class="primary-text" href="mailto:hello@yourcompany.com">hello@yourcompany.com</a> or use the contact form below.</p>
 
     <!-- Simple mailto form (opens user's email client) -->
     <div class="bg-white border p-6 rounded-lg shadow-sm">
@@ -42,7 +47,7 @@
         <textarea name="Message" rows="5" class="mt-1 p-2 w-full border rounded" placeholder="How can we help?" required></textarea>
 
         <div class="mt-4">
-          <button type="submit" class="bg-primary text-white px-4 py-2 rounded">Send</button>
+          <button type="submit" class="primary-bg text-white px-4 py-2 rounded">Send</button>
         </div>
       </form>
 
@@ -53,10 +58,24 @@
   <footer class="bg-white border-t">
     <div class="max-w-6xl mx-auto px-4 py-6 text-sm text-gray-600 flex justify-between">
       <div>© <span id="year5"></span> Booth & Witherspoon Investments</div>
-      <div><a href="index.html" class="text-primary">Home</a></div>
+      <div><a href="index.html" class="primary-text">Home</a></div>
     </div>
   </footer>
 
-  <script>document.getElementById('year5').textContent = new Date().getFullYear();</script>
+  <script>
+    // Theme handling
+    const body = document.getElementById('pageBody');
+    const applyTheme = (theme) => {
+      body.classList.remove('theme-red', 'theme-black');
+      if (theme === 'red') body.classList.add('theme-red');
+      if (theme === 'black') body.classList.add('theme-black');
+      localStorage.setItem('site-theme', theme);
+    }
+    const saved = localStorage.getItem('site-theme') || 'default';
+    applyTheme(saved);
+    document.querySelectorAll('[data-theme]').forEach(btn => btn.addEventListener('click', () => applyTheme(btn.getAttribute('data-theme'))));
+
+    document.getElementById('year5').textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>
