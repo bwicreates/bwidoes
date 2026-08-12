@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Properties — Booth & Witherspoon Investments</title>
+  <link rel="icon" href="/assets/favicon.ico" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <script>tailwind.config = { theme: { extend: { colors: { primary: '#0ea5a4' } } } }</script>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="/assets/css/styles.css">
+</head>
+<body class="font-inter text-gray-800" id="pageBody">
+  <header class="bg-white shadow-sm">
+    <div class="max-w-6xl mx-auto px-4 py-4 flex justify-between items-center">
+      <a href="/index.html" class="flex items-center gap-3">
+        <img src="/assets/images/logo.png" alt="Booth & Witherspoon Investments logo" class="h-8 w-auto">
+        <span class="sr-only">Booth & Witherspoon Investments</span>
+      </a>
+      <nav class="hidden md:flex gap-6 items-center">
+        <a href="/index.html" class="text-gray-700 hover:primary-text">Home</a>
+        <a href="/services.html" class="text-gray-700 hover:primary-text">Services</a>
+
+        <div class="relative group">
+          <button class="dropdown-toggle text-gray-700 hover:primary-text" aria-expanded="true">Real Estate
+            <svg class="w-3 h-3 inline-block ml-1" viewBox="0 0 10 10" fill="none"><path d="M1 3l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </button>
+          <div class="dropdown-menu" role="menu" aria-hidden="false">
+            <a href="/real-estate.html" role="menuitem">Overview</a>
+            <a href="/realestate/properties/" role="menuitem">Properties</a>
+          </div>
+        </div>
+
+        <a href="/marketing.html" class="text-gray-700 hover:primary-text">Marketing</a>
+        <a href="/consulting.html" class="text-gray-700 hover:primary-text">Consulting</a>
+        <a href="/contact.html" class="text-gray-700 hover:primary-text">Contact</a>
+      </nav>
+      <div class="hidden md:block theme-switcher">
+        <button data-theme="default" class="px-3 py-1 rounded-md bg-gray-100 hover:bg-gray-200">Default</button>
+        <button data-theme="red" class="px-3 py-1 rounded-md bg-red-700 text-white">Red</button>
+        <button data-theme="black" class="px-3 py-1 rounded-md bg-black text-white">Black</button>
+      </div>
+    </div>
+    <div id="mobileMenu" class="hidden md:hidden border-t">
+      <div class="px-4 py-4 flex flex-col gap-2">
+        <a href="/about.html" class="block text-gray-700">About</a>
+        <a href="/services.html" class="block text-gray-700">Services</a>
+        <button class="w-full text-left block text-gray-700" data-toggle-submenu="real-estate">Real Estate ▾</button>
+        <div id="submenu-real-estate" class="pl-4 mobile-submenu">
+          <a href="/real-estate.html" class="block text-gray-700">Overview</a>
+          <a href="/realestate/properties/" class="block text-gray-700">Properties</a>
+        </div>
+        <a href="/marketing.html" class="block text-gray-700">Marketing</a>
+        <a href="/consulting.html" class="block text-gray-700">Consulting</a>
+        <a href="/contact.html" class="block text-gray-700">Contact</a>
+        <div class="mt-2 flex gap-2">
+          <button data-theme="default" class="px-3 py-1 rounded-md bg-gray-100">Default</button>
+          <button data-theme="red" class="px-3 py-1 rounded-md bg-red-700 text-white">Red</button>
+          <button data-theme="black" class="px-3 py-1 rounded-md bg-black text-white">Black</button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main class="max-w-6xl mx-auto px-4 py-12">
+    <div class="flex items-center justify-between mb-6">
+      <h1 class="text-3xl font-bold">Properties</h1>
+      <div class="text-sm text-gray-600">Showing featured listings</div>
+    </div>
+
+    <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+      <!-- Repeatable property item -->
+      <article class="bg-white border rounded-lg overflow-hidden shadow-sm">
+        <img src="https://images.unsplash.com/photo-1560184897-6b01c0b7c6ff?q=80&w=1600&auto=format&fit=crop&ixlib=rb-4.0.3&s=placeholder" alt="Property" class="w-full h-48 object-cover">
+        <div class="p-4">
+          <h3 class="font-semibold">Modern office space — Downtown</h3>
+          <p class="text-sm text-gray-600 mt-1">3,200 sq ft · Flexible lease</p>
+          <p class="mt-3 font-semibold primary-text">$6,200 / mo</p>
+          <div class="mt-4 flex justify-between items-center">
+            <a href="/contact.html" class="text-sm text-gray-700 hover:primary-text">Inquire</a>
+            <a class="text-sm text-gray-500">Ref: #001</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="bg-white border rounded-lg overflow-hidden shadow-sm">
+        <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=1600&auto=format&fit=crop&ixlib=rb-4.0.3&s=placeholder" alt="Property" class="w-full h-48 object-cover">
+        <div class="p-4">
+          <h3 class="font-semibold">Retail storefront — Main Street</h3>
+          <p class="text-sm text-gray-600 mt-1">1,100 sq ft · High footfall</p>
+          <p class="mt-3 font-semibold primary-text">$3,800 / mo</p>
+          <div class="mt-4 flex justify-between items-center">
+            <a href="/contact.html" class="text-sm text-gray-700 hover:primary-text">Inquire</a>
+            <a class="text-sm text-gray-500">Ref: #002</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="bg-white border rounded-lg overflow-hidden shadow-sm">
+        <img src="https://images.unsplash.com/photo-1505691723518-36a3f15b768b?q=80&w=1600&auto=format&fit=crop&ixlib=rb-4.0.3&s=placeholder" alt="Property" class="w-full h-48 object-cover">
+        <div class="p-4">
+          <h3 class="font-semibold">Industrial warehouse — Logistics Park</h3>
+          <p class="text-sm text-gray-600 mt-1">12,000 sq ft · Drive-in bays</p>
+          <p class="mt-3 font-semibold primary-text">$12,500 / mo</p>
+          <div class="mt-4 flex justify-between items-center">
+            <a href="/contact.html" class="text-sm text-gray-700 hover:primary-text">Inquire</a>
+            <a class="text-sm text-gray-500">Ref: #003</a>
+          </div>
+        </div>
+      </article>
+
+    </div>
+  </main>
+
+  <footer class="bg-white border-t">
+    <div class="max-w-6xl mx-auto px-4 py-6 text-sm text-gray-600 flex justify-between">
+      <div>© <span id="year4"></span> Booth & Witherspoon Investments</div>
+      <div><a href="/contact.html" class="primary-text">Contact</a></div>
+    </div>
+  </footer>
+
+  <script>
+    // Theme handling
+    const body = document.getElementById('pageBody');
+    const applyTheme = (theme) => { body.classList.remove('theme-red','theme-black'); if (theme==='red') body.classList.add('theme-red'); if (theme==='black') body.classList.add('theme-black'); localStorage.setItem('site-theme',theme); }
+    const saved = localStorage.getItem('site-theme')||'default'; applyTheme(saved);
+    document.querySelectorAll('[data-theme]').forEach(btn=>btn.addEventListener('click',()=>applyTheme(btn.getAttribute('data-theme'))));
+
+    document.getElementById('year4').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
