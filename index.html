@@ -3,24 +3,12 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Booth & Witherspoon Investments — Business Development, Real Estate & Marketing</title>
+  <title>Booth & Witherspoon Investments — Home</title>
   <meta name="description" content="Business development, real estate & marketing services — strategy, listings, and growth." />
   <link rel="icon" href="assets/favicon.ico" />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
   <script>
-    // Tailwind CDN with a small custom color (kept for utilities)
-    tailwind.config = {
-      theme: {
-        extend: {
-          colors: {
-            primary: '#0ea5a4'
-          },
-          fontFamily: {
-            inter: ['Inter', 'system-ui', 'sans-serif']
-          }
-        }
-      }
-    }
+    tailwind.config = { theme: { extend: { colors: { primary: '#0ea5a4' } } } }
   </script>
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="assets/css/styles.css">
@@ -30,12 +18,15 @@
     <div class="max-w-6xl mx-auto px-4 sm:px-6">
       <div class="flex justify-between items-center py-4">
         <a href="index.html" class="flex items-center gap-3">
-          <img src="assets/images/logo.svg" alt="Booth & Witherspoon Investments logo" class="h-8 w-auto">
+          <img src="assets/images/logo.png" alt="Booth & Witherspoon Investments logo" class="h-8 w-auto">
           <span class="sr-only">Booth & Witherspoon Investments</span>
         </a>
         <nav class="hidden md:flex gap-6 items-center">
           <a href="about.html" class="text-gray-700 hover:primary-text">About</a>
           <a href="services.html" class="text-gray-700 hover:primary-text">Services</a>
+          <a href="marketing.html" class="text-gray-700 hover:primary-text">Marketing</a>
+          <a href="real-estate.html" class="text-gray-700 hover:primary-text">Real Estate</a>
+          <a href="consulting.html" class="text-gray-700 hover:primary-text">Consulting</a>
           <a href="properties.html" class="text-gray-700 hover:primary-text">Properties</a>
           <a href="contact.html" class="text-gray-700 hover:primary-text">Contact</a>
         </nav>
@@ -46,18 +37,18 @@
             <button data-theme="black" class="px-3 py-1 rounded-md bg-black text-white">Black</button>
           </div>
           <div class="md:hidden">
-            <button id="menuBtn" aria-label="Toggle menu" class="p-2 rounded-md text-gray-700 hover:bg-gray-100">
-              ☰
-            </button>
+            <button id="menuBtn" aria-label="Toggle menu" class="p-2 rounded-md text-gray-700 hover:bg-gray-100">☰</button>
           </div>
         </div>
       </div>
     </div>
-    <!-- Mobile menu -->
     <div id="mobileMenu" class="hidden md:hidden border-t">
       <div class="px-4 py-4 flex flex-col gap-2">
         <a href="about.html" class="block text-gray-700">About</a>
         <a href="services.html" class="block text-gray-700">Services</a>
+        <a href="marketing.html" class="block text-gray-700">Marketing</a>
+        <a href="real-estate.html" class="block text-gray-700">Real Estate</a>
+        <a href="consulting.html" class="block text-gray-700">Consulting</a>
         <a href="properties.html" class="block text-gray-700">Properties</a>
         <a href="contact.html" class="block text-gray-700">Contact</a>
         <div class="mt-2 flex gap-2">
@@ -70,7 +61,6 @@
   </header>
 
   <main>
-    <!-- Hero -->
     <section class="bg-gradient-to-r from-white to-white">
       <div class="max-w-6xl mx-auto px-4 sm:px-6 py-16 lg:py-24">
         <div class="lg:flex lg:items-center lg:space-x-12">
@@ -97,7 +87,6 @@
       </div>
     </section>
 
-    <!-- Services -->
     <section class="max-w-6xl mx-auto px-4 sm:px-6 py-12">
       <h2 class="text-2xl font-semibold mb-6">Services</h2>
       <div class="grid md:grid-cols-3 gap-6">
@@ -112,67 +101,6 @@
         <div class="p-6 border rounded-lg">
           <h3 class="font-semibold mb-2">Marketing</h3>
           <p class="text-sm text-gray-600">Branding, digital advertising, content, and lead generation campaigns to attract customers.</p>
-        </div>
-      </div>
-    </section>
-
-    <!-- Featured properties preview -->
-    <section class="bg-gray-50 py-12">
-      <div class="max-w-6xl mx-auto px-4 sm:px-6">
-        <div class="flex items-center justify-between mb-6">
-          <h2 class="text-2xl font-semibold">Featured Properties</h2>
-          <a href="properties.html" class="primary-text hover:underline">See all</a>
-        </div>
-        <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-          <!-- Property card -->
-          <article class="bg-white border rounded-lg overflow-hidden shadow-sm">
-            <img src="https://images.unsplash.com/photo-1572120360610-d971b9b2a3a3?q=80&w=1600&auto=format&fit=crop&ixlib=rb-4.0.3&s=placeholder" alt="Property 1" class="w-full h-40 object-cover">
-            <div class="p-4">
-              <h4 class="font-semibold">Modern office space — Downtown</h4>
-              <p class="text-sm text-gray-600 mt-1">3,200 sq ft · Flexible terms</p>
-              <div class="mt-4 flex justify-between items-center">
-                <span class="primary-text font-semibold">$6,200 / mo</span>
-                <a href="contact.html" class="text-sm text-gray-700 hover:primary-text">Inquire</a>
-              </div>
-            </div>
-          </article>
-
-          <article class="bg-white border rounded-lg overflow-hidden shadow-sm">
-            <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=1600&auto=format&fit=crop&ixlib=rb-4.0.3&s=placeholder" alt="Property 2" class="w-full h-40 object-cover">
-            <div class="p-4">
-              <h4 class="font-semibold">Retail storefront — High traffic</h4>
-              <p class="text-sm text-gray-600 mt-1">1,100 sq ft · Excellent visibility</p>
-              <div class="mt-4 flex justify-between items-center">
-                <span class="primary-text font-semibold">$3,800 / mo</span>
-                <a href="contact.html" class="text-sm text-gray-700 hover:primary-text">Inquire</a>
-              </div>
-            </div>
-          </article>
-
-          <article class="bg-white border rounded-lg overflow-hidden shadow-sm">
-            <img src="https://images.unsplash.com/photo-1505691723518-36a3f15b768b?q=80&w=1600&auto=format&fit=crop&ixlib=rb-4.0.3&s=placeholder" alt="Property 3" class="w-full h-40 object-cover">
-            <div class="p-4">
-              <h4 class="font-semibold">Industrial warehouse — Accessible</h4>
-              <p class="text-sm text-gray-600 mt-1">12,000 sq ft · Drive-in bays</p>
-              <div class="mt-4 flex justify-between items-center">
-                <span class="primary-text font-semibold">$12,500 / mo</span>
-                <a href="contact.html" class="text-sm text-gray-700 hover:primary-text">Inquire</a>
-              </div>
-            </div>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <!-- CTA -->
-    <section class="max-w-6xl mx-auto px-4 sm:px-6 py-12">
-      <div class="primary-bg-soft primary-border-soft rounded-lg p-8 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
-        <div>
-          <h3 class="text-lg font-semibold">Ready to grow your business or list a property?</h3>
-          <p class="text-sm text-gray-600">Contact us for a free consultation.</p>
-        </div>
-        <div>
-          <a href="contact.html" class="primary-bg text-white px-5 py-3 rounded-md inline-block">Contact us</a>
         </div>
       </div>
     </section>
@@ -192,29 +120,11 @@
   </footer>
 
   <script>
-    // Mobile menu toggle
-    document.getElementById('menuBtn').addEventListener('click', function () {
-      const m = document.getElementById('mobileMenu');
-      m.classList.toggle('hidden');
-    });
-
-    // Theme handling
+    document.getElementById('menuBtn').addEventListener('click', function () { const m = document.getElementById('mobileMenu'); m.classList.toggle('hidden'); });
     const body = document.getElementById('pageBody');
-    const applyTheme = (theme) => {
-      body.classList.remove('theme-red', 'theme-black');
-      if (theme === 'red') body.classList.add('theme-red');
-      if (theme === 'black') body.classList.add('theme-black');
-      localStorage.setItem('site-theme', theme);
-    }
-    // Initialize theme from storage
-    const saved = localStorage.getItem('site-theme') || 'default';
-    applyTheme(saved);
-
-    // Theme buttons
-    document.querySelectorAll('[data-theme]').forEach(btn => {
-      btn.addEventListener('click', () => applyTheme(btn.getAttribute('data-theme')));
-    });
-
+    const applyTheme = (theme) => { body.classList.remove('theme-red', 'theme-black'); if (theme === 'red') body.classList.add('theme-red'); if (theme === 'black') body.classList.add('theme-black'); localStorage.setItem('site-theme', theme); }
+    const saved = localStorage.getItem('site-theme') || 'default'; applyTheme(saved);
+    document.querySelectorAll('[data-theme]').forEach(btn => btn.addEventListener('click', () => applyTheme(btn.getAttribute('data-theme'))));
     document.getElementById('year').textContent = new Date().getFullYear();
   </script>
 </body>

@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Marketing — Booth & Witherspoon Investments</title>
+  <link rel="icon" href="assets/favicon.ico" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <script>tailwind.config = { theme: { extend: { colors: { primary: '#0ea5a4' } } } }</script>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body class="font-inter text-gray-800" id="pageBody">
+  <header class="bg-white shadow-sm">
+    <div class="max-w-6xl mx-auto px-4 py-4 flex justify-between items-center">
+      <a href="index.html" class="flex items-center gap-3">
+        <img src="assets/images/logo.png" alt="Booth & Witherspoon Investments logo" class="h-8 w-auto">
+        <span class="sr-only">Booth & Witherspoon Investments</span>
+      </a>
+      <nav class="hidden md:flex gap-6 items-center">
+        <a href="index.html" class="text-gray-700 hover:primary-text">Home</a>
+        <a href="services.html" class="text-gray-700 hover:primary-text">Services</a>
+        <a href="real-estate.html" class="text-gray-700 hover:primary-text">Real Estate</a>
+        <a href="consulting.html" class="text-gray-700 hover:primary-text">Consulting</a>
+        <a href="properties.html" class="text-gray-700 hover:primary-text">Properties</a>
+        <a href="contact.html" class="text-gray-700 hover:primary-text">Contact</a>
+      </nav>
+      <div class="hidden md:block theme-switcher">
+        <button data-theme="default" class="px-3 py-1 rounded-md bg-gray-100 hover:bg-gray-200">Default</button>
+        <button data-theme="red" class="px-3 py-1 rounded-md bg-red-700 text-white">Red</button>
+        <button data-theme="black" class="px-3 py-1 rounded-md bg-black text-white">Black</button>
+      </div>
+    </div>
+  </header>
+
+  <main class="max-w-6xl mx-auto px-4 py-12">
+    <h1 class="text-3xl font-bold mb-4">Marketing Services</h1>
+    <p class="text-gray-600 mb-6">We design and execute marketing programs that generate qualified leads and build brands for both businesses and properties.</p>
+
+    <section class="grid md:grid-cols-2 gap-6 mb-8">
+      <div class="p-6 border rounded-lg">
+        <h3 class="font-semibold mb-2">Digital Advertising</h3>
+        <p class="text-sm text-gray-600">Targeted campaigns across search and social to attract high-intent prospects and tenants.</p>
+      </div>
+      <div class="p-6 border rounded-lg">
+        <h3 class="font-semibold mb-2">Content & Listings</h3>
+        <p class="text-sm text-gray-600">Compelling copy, photography guidance, and listing optimization to increase visibility and response rates.</p>
+      </div>
+    </section>
+
+    <section class="grid md:grid-cols-2 gap-6">
+      <div class="p-6 border rounded-lg">
+        <h3 class="font-semibold mb-2">Branding & Positioning</h3>
+        <p class="text-sm text-gray-600">Clarify your value proposition, messaging, and visual identity to stand out in competitive markets.</p>
+      </div>
+      <div class="p-6 border rounded-lg">
+        <h3 class="font-semibold mb-2">Analytics & Reporting</h3>
+        <p class="text-sm text-gray-600">Track campaign performance and property engagement so you can focus on what converts.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="bg-white border-t">
+    <div class="max-w-6xl mx-auto px-4 py-6 text-sm text-gray-600 flex justify-between">
+      <div>© <span id="year-marketing"></span> Booth & Witherspoon Investments</div>
+      <div><a href="contact.html" class="primary-text">Contact</a></div>
+    </div>
+  </footer>
+
+  <script>
+    const body = document.getElementById('pageBody');
+    const applyTheme = (theme) => { body.classList.remove('theme-red','theme-black'); if (theme==='red') body.classList.add('theme-red'); if (theme==='black') body.classList.add('theme-black'); localStorage.setItem('site-theme',theme); }
+    const saved = localStorage.getItem('site-theme')||'default'; applyTheme(saved);
+    document.querySelectorAll('[data-theme]').forEach(btn=>btn.addEventListener('click',()=>applyTheme(btn.getAttribute('data-theme'))));
+    document.getElementById('year-marketing').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
