@@ -144,6 +144,25 @@
       });
     });
 
+    // Auto-open Real Estate dropdown when on any realestate page
+    (function() {
+      try {
+        var path = location.pathname || '';
+        if (path.indexOf('/realestate') !== -1) {
+          var ddBtn = document.querySelector('.dropdown-toggle');
+          var ddMenu = document.querySelector('.dropdown-menu');
+          if (ddBtn) ddBtn.setAttribute('aria-expanded', 'true');
+          if (ddMenu) {
+            ddMenu.setAttribute('aria-hidden', 'false');
+            ddMenu.classList.add('open');
+            ddMenu.style.display = 'block';
+          }
+          var mobileSub = document.getElementById('submenu-real-estate');
+          if (mobileSub) mobileSub.classList.add('open');
+        }
+      } catch (e) { console.error(e); }
+    })();
+
     // Theme handling
     const body = document.getElementById('pageBody');
     const applyTheme = (theme) => { body.classList.remove('theme-red', 'theme-black'); if (theme === 'red') body.classList.add('theme-red'); if (theme === 'black') body.classList.add('theme-black'); localStorage.setItem('site-theme', theme); }
