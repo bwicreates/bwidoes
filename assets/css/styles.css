@@ -51,6 +51,17 @@ h1,h2,h3,h4,h5,h6 {
   color: #111827;
 }
 
+/* Dropdown styles for Real Estate submenu */
+.dropdown-toggle { display: inline-flex; align-items: center; gap: .5rem; }
+.dropdown-menu { display: none; position: absolute; left: 0; margin-top: .5rem; min-width: 12rem; background: #fff; border: 1px solid rgba(0,0,0,0.08); border-radius: .375rem; box-shadow: 0 4px 12px rgba(0,0,0,0.08); z-index: 40; }
+.dropdown-menu a { display: block; padding: .5rem 1rem; color: #374151; }
+.dropdown-menu a:hover { background: #f8fafc; }
+.group:hover .dropdown-menu, .dropdown-open .dropdown-menu { display: block; }
+
+/* Mobile submenu */
+.mobile-submenu { display: none; }
+.mobile-submenu.open { display: block; }
+
 /* Small helpers */
 img[alt=""] { background: #f3f4f6; }
 .theme-switcher button { font-size: 0.85rem; }

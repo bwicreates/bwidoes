@@ -20,15 +20,44 @@
       <nav class="hidden md:flex gap-6 items-center">
         <a href="index.html" class="text-gray-700 hover:primary-text">Home</a>
         <a href="services.html" class="text-gray-700 hover:primary-text">Services</a>
+
+        <div class="relative group">
+          <button class="dropdown-toggle text-gray-700 hover:primary-text" aria-expanded="true">Real Estate
+            <svg class="w-3 h-3 inline-block ml-1" viewBox="0 0 10 10" fill="none"><path d="M1 3l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </button>
+          <div class="dropdown-menu" role="menu" aria-hidden="false">
+            <a href="real-estate.html" role="menuitem">Overview</a>
+            <a href="properties.html" role="menuitem">Properties</a>
+          </div>
+        </div>
+
         <a href="marketing.html" class="text-gray-700 hover:primary-text">Marketing</a>
         <a href="consulting.html" class="text-gray-700 hover:primary-text">Consulting</a>
-        <a href="properties.html" class="text-gray-700 hover:primary-text">Properties</a>
         <a href="contact.html" class="text-gray-700 hover:primary-text">Contact</a>
       </nav>
       <div class="hidden md:block theme-switcher">
         <button data-theme="default" class="px-3 py-1 rounded-md bg-gray-100 hover:bg-gray-200">Default</button>
         <button data-theme="red" class="px-3 py-1 rounded-md bg-red-700 text-white">Red</button>
         <button data-theme="black" class="px-3 py-1 rounded-md bg-black text-white">Black</button>
+      </div>
+    </div>
+    <div id="mobileMenu" class="hidden md:hidden border-t">
+      <div class="px-4 py-4 flex flex-col gap-2">
+        <a href="about.html" class="block text-gray-700">About</a>
+        <a href="services.html" class="block text-gray-700">Services</a>
+        <button class="w-full text-left block text-gray-700" data-toggle-submenu="real-estate">Real Estate ▾</button>
+        <div id="submenu-real-estate" class="pl-4 mobile-submenu">
+          <a href="real-estate.html" class="block text-gray-700">Overview</a>
+          <a href="properties.html" class="block text-gray-700">Properties</a>
+        </div>
+        <a href="marketing.html" class="block text-gray-700">Marketing</a>
+        <a href="consulting.html" class="block text-gray-700">Consulting</a>
+        <a href="contact.html" class="block text-gray-700">Contact</a>
+        <div class="mt-2 flex gap-2">
+          <button data-theme="default" class="px-3 py-1 rounded-md bg-gray-100">Default</button>
+          <button data-theme="red" class="px-3 py-1 rounded-md bg-red-700 text-white">Red</button>
+          <button data-theme="black" class="px-3 py-1 rounded-md bg-black text-white">Black</button>
+        </div>
       </div>
     </div>
   </header>
@@ -68,6 +97,15 @@
   </footer>
 
   <script>
+    // Mobile submenu toggle
+    document.querySelectorAll('[data-toggle-submenu]').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const id = btn.getAttribute('data-toggle-submenu');
+        const el = document.getElementById('submenu-' + id);
+        if (el) el.classList.toggle('open');
+      });
+    });
+
     const body = document.getElementById('pageBody');
     const applyTheme = (theme) => { body.classList.remove('theme-red','theme-black'); if (theme==='red') body.classList.add('theme-red'); if (theme==='black') body.classList.add('theme-black'); localStorage.setItem('site-theme',theme); }
     const saved = localStorage.getItem('site-theme')||'default'; applyTheme(saved);
