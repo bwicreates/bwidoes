@@ -1,22 +1,30 @@
-/* Small custom styles (Tailwind does most of the work) */
 :root {
-  --primary: #0ea5a4; /* default teal */
+  --primary: #0ea5a4; /* default accent */
   --primary-rgb: 14,165,164;
+  --page-bg: #ffffff; /* default page background */
+  --heading-color: #111827; /* default heading color */
+  --body-text-color: #111827;
 }
 
 /* Red theme */
 .theme-red {
   --primary: #7a1616;
   --primary-rgb: 122,22,22;
+  --page-bg: #7a1616;        /* page background becomes dark red */
+  --heading-color: #f8e6d6;  /* light cream for headings on red */
+  --body-text-color: #f3eae6;/* readable body text on red */
 }
 
 /* Black theme */
 .theme-black {
   --primary: #111827;
   --primary-rgb: 17,24,39;
+  --page-bg: #111827;        /* page background becomes nearly black */
+  --heading-color: #f9fafb;  /* near-white for headings on black */
+  --body-text-color: #e6e9ef;/* readable body text on black */
 }
 
-/* Utility classes that use the CSS variables */
+/* Utilities using CSS variables */
 .primary-text { color: var(--primary) !important; }
 .primary-bg { background-color: var(--primary) !important; }
 .primary-border { border-color: var(--primary) !important; }
@@ -24,15 +32,25 @@
 .primary-bg-soft { background-color: rgba(var(--primary-rgb),0.05); }
 .primary-border-soft { border-color: rgba(var(--primary-rgb),0.2); }
 
+/* Page and text colors driven by theme variables */
 body {
+  background-color: var(--page-bg);
+  color: var(--body-text-color);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-/* Fallback for images that fail to load (replace path with your own) */
-img[alt=""] {
-  background: #f3f4f6;
+/* Headings use the theme heading color */
+h1,h2,h3,h4,h5,h6 {
+  color: var(--heading-color) !important;
 }
 
-/* Theme selector styles */
+/* Keep cards/sections readable by preserving white backgrounds for content panels */
+.bg-white, .bg-gray-50, .card, .panel {
+  background-color: #ffffff !important;
+  color: #111827;
+}
+
+/* Small helpers */
+img[alt=""] { background: #f3f4f6; }
 .theme-switcher button { font-size: 0.85rem; }
