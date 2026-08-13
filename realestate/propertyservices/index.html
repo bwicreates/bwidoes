@@ -1,0 +1,182 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Property Services — Booth & Witherspoon Investments</title>
+  <meta name="description" content="Property services, marketing, leasing, and asset strategy for owners and investors." />
+  <link rel="icon" href="/assets/favicon.ico" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <script>tailwind.config = { theme: { extend: { colors: { primary: '#0ea5a4' } } } }</script>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="/assets/css/styles.css">
+</head>
+<body class="font-inter text-gray-800" id="pageBody">
+  <header class="bg-white shadow-sm">
+    <div class="max-w-6xl mx-auto px-4 py-4 flex justify-between items-center">
+      <a href="/index.html" class="flex items-center gap-3">
+        <img src="/assets/images/logo.png" alt="Booth & Witherspoon Investments logo" class="h-8 w-auto">
+        <span class="sr-only">Booth & Witherspoon Investments</span>
+      </a>
+      <nav class="hidden md:flex gap-6 items-center">
+        <a href="/index.html" class="text-gray-700 hover:primary-text">Home</a>
+        <a href="/services.html" class="text-gray-700 hover:primary-text">Services</a>
+
+        <div class="relative group">
+          <button class="dropdown-toggle text-gray-700 hover:primary-text" aria-expanded="true">Real Estate
+            <svg class="w-3 h-3 inline-block ml-1" viewBox="0 0 10 10" fill="none"><path d="M1 3l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </button>
+          <div class="dropdown-menu" role="menu" aria-hidden="false">
+            <a href="/realestate/" role="menuitem">Overview</a>
+            <a href="/realestate/properties/" role="menuitem">Properties</a>
+            <a href="/realestate/propertyservices/" role="menuitem">Property Services</a>
+          </div>
+        </div>
+
+        <a href="/marketing.html" class="text-gray-700 hover:primary-text">Marketing</a>
+        <a href="/consulting.html" class="text-gray-700 hover:primary-text">Consulting</a>
+        <a href="/contact.html" class="text-gray-700 hover:primary-text">Contact</a>
+      </nav>
+      <div class="hidden md:block theme-switcher">
+        <button data-theme="default" class="px-3 py-1 rounded-md bg-gray-100 hover:bg-gray-200">Default</button>
+        <button data-theme="red" class="px-3 py-1 rounded-md bg-red-700 text-white">Red</button>
+        <button data-theme="black" class="px-3 py-1 rounded-md bg-black text-white">Black</button>
+      </div>
+    </div>
+    <div id="mobileMenu" class="hidden md:hidden border-t">
+      <div class="px-4 py-4 flex flex-col gap-2">
+        <a href="/about.html" class="block text-gray-700">About</a>
+        <a href="/services.html" class="block text-gray-700">Services</a>
+        <button class="w-full text-left block text-gray-700" data-toggle-submenu="real-estate">Real Estate ▾</button>
+        <div id="submenu-real-estate" class="pl-4 mobile-submenu">
+          <a href="/realestate/" class="block text-gray-700">Overview</a>
+          <a href="/realestate/properties/" class="block text-gray-700">Properties</a>
+          <a href="/realestate/propertyservices/" class="block text-gray-700">Property Services</a>
+        </div>
+        <a href="/marketing.html" class="block text-gray-700">Marketing</a>
+        <a href="/consulting.html" class="block text-gray-700">Consulting</a>
+        <a href="/contact.html" class="block text-gray-700">Contact</a>
+        <div class="mt-2 flex gap-2">
+          <button data-theme="default" class="px-3 py-1 rounded-md bg-gray-100">Default</button>
+          <button data-theme="red" class="px-3 py-1 rounded-md bg-red-700 text-white">Red</button>
+          <button data-theme="black" class="px-3 py-1 rounded-md bg-black text-white">Black</button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Site pages links block -->
+  <section class="max-w-6xl mx-auto px-4 sm:px-6 py-4">
+    <div class="bg-white border rounded-lg p-4">
+      <h2 class="text-lg font-semibold mb-2">Site pages</h2>
+      <nav class="flex flex-wrap gap-3 text-sm">
+        <a href="/index.html" class="primary-text hover:underline">Home</a>
+        <a href="/about.html" class="primary-text hover:underline">About</a>
+        <a href="/services.html" class="primary-text hover:underline">Services</a>
+        <a href="/realestate/" class="primary-text hover:underline">Real Estate (overview)</a>
+        <a href="/realestate/properties/" class="primary-text hover:underline">Properties (list)</a>
+        <a href="/realestate/propertyservices/" class="primary-text hover:underline">Property Services</a>
+        <a href="/marketing.html" class="primary-text hover:underline">Marketing</a>
+        <a href="/consulting.html" class="primary-text hover:underline">Consulting</a>
+        <a href="/contact.html" class="primary-text hover:underline">Contact</a>
+      </nav>
+    </div>
+  </section>
+
+  <main class="max-w-6xl mx-auto px-4 py-12">
+    <div class="flex items-center justify-between mb-6">
+      <h1 class="text-3xl font-bold">Property Services</h1>
+      <div class="text-sm text-gray-600">Services for owners, investors, and property managers</div>
+    </div>
+
+    <section class="grid md:grid-cols-2 gap-6 mb-8">
+      <div class="p-6 border rounded-lg">
+        <h3 class="font-semibold mb-2">Listing & Marketing</h3>
+        <p class="text-gray-600 mb-4">Professional photography, listing copy, syndication to major portals, and targeted digital campaigns to attract qualified tenants or buyers.</p>
+      </div>
+
+      <div class="p-6 border rounded-lg">
+        <h3 class="font-semibold mb-2">Leasing & Tenant Outreach</h3>
+        <p class="text-gray-600 mb-4">Broker outreach, tenant qualification, showing coordination, and lease negotiation support to reduce vacancy and optimize terms.</p>
+      </div>
+    </section>
+
+    <section class="grid md:grid-cols-2 gap-6 mb-8">
+      <div class="p-6 border rounded-lg">
+        <h3 class="font-semibold mb-2">Asset Strategy & Value-Add</h3>
+        <p class="text-gray-600">Pricing strategy, capital improvement planning, and repositioning recommendations to increase net operating income and asset value.</p>
+      </div>
+
+      <div class="p-6 border rounded-lg">
+        <h3 class="font-semibold mb-2">Operations & Ongoing Management</h3>
+        <p class="text-gray-600">Operational best practices, vendor coordination, and campaign reporting to ensure consistent performance and accountability.</p>
+      </div>
+    </section>
+
+    <section class="bg-gray-50 p-6 rounded-lg border primary-border-soft">
+      <h3 class="font-semibold mb-2">Work With Us</h3>
+      <p class="text-sm text-gray-600 mb-4">We work directly with:</p>
+      <ul class="list-disc list-inside text-sm text-gray-600 mb-4">
+        <li>Institutional and private real estate investors</li>
+        <li>Individual property owners and landlords</li>
+        <li>Brokerage teams and listing agents</li>
+        <li>Property managers and operators</li>
+      </ul>
+      <div class="flex gap-3">
+        <a href="/realestate/properties/" class="inline-block border primary-border primary-text px-4 py-2 rounded-md">View Properties</a>
+        <a href="/contact.html" class="inline-block primary-bg text-white px-4 py-2 rounded-md">Contact Us</a>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="bg-white border-t">
+    <div class="max-w-6xl mx-auto px-4 py-6 text-sm text-gray-600 flex justify-between">
+      <div>© <span id="year-ps"></span> Booth & Witherspoon Investments</div>
+      <div><a href="/contact.html" class="primary-text">Contact</a></div>
+    </div>
+  </footer>
+
+  <script>
+    // Mobile menu toggle
+    const menuBtn = document.getElementById('menuBtn');
+    if (menuBtn) menuBtn.addEventListener('click', function () { const m = document.getElementById('mobileMenu'); if (m) m.classList.toggle('hidden'); });
+
+    // Mobile submenu toggle
+    document.querySelectorAll('[data-toggle-submenu]').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const id = btn.getAttribute('data-toggle-submenu');
+        const el = document.getElementById('submenu-' + id);
+        if (el) el.classList.toggle('open');
+      });
+    });
+
+    // Auto-open Real Estate dropdown when on any realestate page
+    (function() {
+      try {
+        var path = location.pathname || '';
+        if (path.indexOf('/realestate') !== -1) {
+          var ddBtn = document.querySelector('.dropdown-toggle');
+          var ddMenu = document.querySelector('.dropdown-menu');
+          if (ddBtn) ddBtn.setAttribute('aria-expanded', 'true');
+          if (ddMenu) {
+            ddMenu.setAttribute('aria-hidden', 'false');
+            ddMenu.classList.add('open');
+            ddMenu.style.display = 'block';
+          }
+          var mobileSub = document.getElementById('submenu-real-estate');
+          if (mobileSub) mobileSub.classList.add('open');
+        }
+      } catch (e) { console.error(e); }
+    })();
+
+    // Theme handling (kept for parity with other pages)
+    const body = document.getElementById('pageBody');
+    const applyTheme = (theme) => { body.classList.remove('theme-red','theme-black'); if (theme==='red') body.classList.add('theme-red'); if (theme==='black') body.classList.add('theme-black'); localStorage.setItem('site-theme',theme); }
+    const saved = localStorage.getItem('site-theme')||'default'; applyTheme(saved);
+    document.querySelectorAll('[data-theme]').forEach(btn=>btn.addEventListener('click',()=>applyTheme(btn.getAttribute('data-theme'))));
+
+    document.getElementById('year-ps').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
